@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe Rubocop::RspecAntiFalsy do
+RSpec.describe RuboCop::RspecAntiFalsy do
   it "has a version number" do
-    expect(Rubocop::RspecAntiFalsy::VERSION).not_to be nil
+    expect(RuboCop::RspecAntiFalsy::VERSION).not_to be nil
   end
 
   it "does something useful" do

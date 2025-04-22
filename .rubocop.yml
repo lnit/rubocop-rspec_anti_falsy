@@ -2,6 +2,15 @@ plugins:
   - rubocop-internal_affairs
   - rubocop-rspec_anti_falsy
 
+AllCops:
+  NewCops: disable
+
 Naming/FileName:
   Exclude:
     - lib/rubocop-rspec_anti_falsy.rb
+
+Style/QuotedSymbols:
+  EnforcedStyle: double_quotes
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
