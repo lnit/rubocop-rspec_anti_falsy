@@ -1,5 +1,11 @@
 # Write it!
 
+RSpec/AvoidBeFalsy:
+  Description: 'Avoid using `be_falsy` matcher in RSpec tests.'
+  Safe: false
+  Enabled: true
+  VersionAdded: '0.1.0'
+
 RSpec/AvoidBeTruthy:
   Description: 'Avoid using `be_truthy` matcher in RSpec tests.'
   Safe: false
