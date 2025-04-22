@@ -1,0 +1,7 @@
+plugins:
+  - rubocop-internal_affairs
+  - rubocop-rspec_anti_falsy
+
+Naming/FileName:
+  Exclude:
+    - lib/rubocop-rspec_anti_falsy.rb
