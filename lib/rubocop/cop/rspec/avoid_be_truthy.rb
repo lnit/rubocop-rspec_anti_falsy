@@ -13,9 +13,6 @@ module RuboCop
       #   # good
       #   expect(subject).to be true
       #
-      #   # good
-      #   expect(subject.nil).to be false
-      #
       class AvoidBeTruthy < Base
         MSG = "Use `#be true` instead of `#be_truthy`."
 
