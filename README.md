@@ -1,24 +1,39 @@
 # RuboCop::RspecAntiFalsy
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/rspec_anti_falsy`. To experiment with that code, run `bin/console` for an interactive prompt.
+RuboCop Plugin for RSpec to avoid using `be_truthy` and `be_falsy` matcher.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Just install the `rubocop-rspec_anti_falsy` gem
 
-Install the gem and add to the application's Gemfile by executing:
+```bash
+gem install rubocop-rspec_anti_falsy
+```
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG --require=false
+or if you use bundler put this in your `Gemfile`
 
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```ruby
+gem "rubocop-rspec_anti_falsy", require: false
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to tell RuboCop to load the extension.
+
+### RuboCop configuration file
+
+Put this into your `.rubocop.yml`:
+
+```yaml
+plugins:
+  - rubocop-rspec_anti_falsy
+```
+
+### Command line
+
+```bash
+rubocop --require rubocop-rspec_anti_falsy
+```
 
 ## Development
 
