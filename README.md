@@ -2,6 +2,23 @@
 
 RuboCop Plugin for RSpec to avoid using `be_truthy` and `be_falsy` matcher.
 
+```ruby
+# bad
+expect(subject).to be_truthy
+
+# good
+expect(subject).to be true
+```
+
+```ruby
+# bad
+expect(subject).to be_falsy
+
+# good
+expect(subject).to be false
+```
+
+
 ## Installation
 
 Just install the `rubocop-rspec_anti_falsy` gem
