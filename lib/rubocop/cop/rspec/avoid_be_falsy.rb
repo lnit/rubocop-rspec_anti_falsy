@@ -14,6 +14,8 @@ module RuboCop
       #   expect(subject).to be false
       #
       class AvoidBeFalsy < Base
+        extend AutoCorrector
+
         MSG = "Use `#be false` instead of `#be_falsy`."
 
         RESTRICT_ON_SEND = %i[be_falsy].freeze
@@ -31,7 +33,9 @@ module RuboCop
         def on_send(node)
           return unless be_falsy?(node)
 
-          add_offense(node)
+          add_offense(node) do |corrector|
+            corrector.replace(node.loc.selector, "be false")
+          end
         end
         alias on_csend on_send
       end
